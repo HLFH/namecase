@@ -21,7 +21,7 @@ This library is a port of the Perl library, and owes most of its functionality
 to the [Perl version by Mark Summerfield](https://metacpan.org/release/SUMMER/Lingua-EN-NameCase-1.12). Any bugs in the Ruby port are my
 fault.
 
-## Author
+## Authors
 
 Original Version:
 Copyright (c) Mark Summerfield 1998-2002.
