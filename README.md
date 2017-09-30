@@ -36,4 +36,4 @@ Copyright (c) Gaspard d'Hautefeuille 2017
 
 ## License
 
-Namelib is distributed under the GPL v2 license.  Please see the LICENSE file.
+Namelib is distributed under the GPL v3 license.  Please see the LICENSE file.
