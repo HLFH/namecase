@@ -1,25 +1,24 @@
-# [NameCase](https://rubygems.org/gems/namecase)
+# [Namelib](https://rubygems.org/gems/namelib)
 
-https://rubygems.org/gems/namecase
+https://rubygems.org/gems/namelib
 
 ## Description
 
-NameCase is a Ruby implementation of `Lingua::EN::NameCase`, a library for
+Namelib is a Ruby implementation of `Lingua::EN::NameCase`, a library for
 converting strings to be properly cased. This is good for converting
 denormalized names to human friendly ones.
 
 ## Example Usage
 
 ```ruby
-NameCase("RON BURGUNDY")  # => Ron Burgundy
-NameCase("MCDONALDS")     # => McDonalds
+Namelib("RON BURGUNDY")  # => Ron Burgundy
+Namelib("MCDONALDS")     # => McDonalds
 ```
 
 ## Acknowledgements
 
-This library is a port of the Perl library, and owes most of its functionality
-to the [Perl version by Mark Summerfield](https://metacpan.org/release/SUMMER/Lingua-EN-NameCase-1.12). Any bugs in the Ruby port are my
-fault.
+This library is a port of a [Perl library by Mark Summerfield](https://metacpan.org/release/SUMMER/Lingua-EN-NameCase-1.12). 
+And also a fork of the `NameCase` gem by Aaron Patterson.
 
 ## Authors
 
@@ -28,12 +27,15 @@ Copyright (c) Mark Summerfield 1998-2002.
 <summer@perlpress.com>
 All Rights Reserved
 
-Ruby Version:
+Ruby version:
 Copyright (c) Aaron Patterson 2006-2015
+
+Ruby fork:
+Copyleft (ccc) Gaspard d'Hautefeuille 2017
 
 ## License
 
-NameCase is distributed under the GPL license.  Please see the LICENSE file.
+Namelib is distributed under the GPL license.  Please see the LICENSE file.
 
 
   [2]: https://metacpan.org/release/SUMMER/Lingua-EN-NameCase-1.12
