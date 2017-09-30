@@ -4,9 +4,8 @@ https://rubygems.org/gems/namelib
 
 ## Description
 
-Namelib is a Ruby implementation of `Lingua::EN::NameCase`, a library for
-converting strings to be properly cased. This is good for converting
-denormalized names to human friendly ones.
+Namelib is a Ruby fork of NameCase, a library for
+converting denormalized names to be properly cased.
 
 ## Example Usage
 
