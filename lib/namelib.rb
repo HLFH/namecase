@@ -1,18 +1,18 @@
-module NameCase
+module Namelib
   VERSION = '2.1.0'
 
   # Returns a new +String+ with the contents properly namecased
   def nc(options = {})
-    NameCase.nc self, options
+    Namelib.nc self, options
   end
 
   # Modifies _str_ in place and properly namecases the string.
   def nc!(options = {})
-    NameCase.nc! self, options
+    Namelib.nc! self, options
   end
 
   def self.nc! str, options = {}
-    str.replace NameCase.nc(str, options)
+    str.replace Namelib.nc(str, options)
   end
 
   def self.nc str, options = {}
@@ -84,10 +84,10 @@ module NameCase
   end
 end
 
-def NameCase(string, options = {})
-  NameCase.nc string, options
+def Namelib(string, options = {})
+  Namelib.nc string, options
 end
 
-def NameCase!(string, options = {})
-  NameCase.nc! string, options
+def Namelib!(string, options = {})
+  Namelib.nc! string, options
 end

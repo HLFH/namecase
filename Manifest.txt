@@ -4,6 +4,6 @@ LICENSE.txt
 Manifest.txt
 README.md
 Rakefile
-lib/namecase.rb
-namecase.gemspec
-test/test_namecase.rb
+lib/namelib.rb
+namelib.gemspec
+test/test_namelib.rb

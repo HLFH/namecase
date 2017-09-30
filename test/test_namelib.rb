@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 #
-require 'namecase'
+require 'namelib'
 require 'minitest/autorun'
 
-class TestNameCase < Minitest::Test
+class TestNamelib < Minitest::Test
   def setup
     @proper_names = [
       "Keith",            "Leigh-Williams",       "McCarthy",
@@ -31,26 +31,26 @@ class TestNameCase < Minitest::Test
     ]
   end
 
-  def test_namecase
+  def test_namelib
     @proper_names.each do |name|
-      assert_equal(name, NameCase(name.downcase))
+      assert_equal(name, Namelib(name.downcase))
       n = name.dup
-      n.extend(NameCase)
+      n.extend(Namelib)
       assert_equal(name, n.nc)
-      assert_equal(name, NameCase(name))
+      assert_equal(name, Namelib(name))
     end
   end
 
-  def test_namecase_modify
+  def test_namelib_modify
     @proper_names.each do |name|
-      nc_name = NameCase!(name.downcase)
+      nc_name = Namelib!(name.downcase)
       assert_equal(name, nc_name)
     end
   end
 
-  def test_namecase_multibyte
+  def test_namelib_multibyte
     proper_cased = 'Iñtërnâtiônàlizætiøn'
-    nc_name = NameCase(proper_cased.downcase)
+    nc_name = Namelib(proper_cased.downcase)
     assert_equal(proper_cased, nc_name)
   end
 end

@@ -30,11 +30,11 @@ Ruby version:
 Copyright (c) Aaron Patterson 2006-2015
 
 Ruby fork:
-Copyleft (ccc) Gaspard d'Hautefeuille 2017
+Copyright (c) Gaspard d'Hautefeuille 2017
 
 ## License
 
-Namelib is distributed under the GPL license.  Please see the LICENSE file.
+Namelib is distributed under the GPL v2 license.  Please see the LICENSE file.
 
 
   [2]: https://metacpan.org/release/SUMMER/Lingua-EN-NameCase-1.12

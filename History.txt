@@ -1,4 +1,18 @@
-= NameCase CHANGELOG
+= Namelib CHANGELOG
+
+== 2.1.0
+
+* New Features:
+  * Rename NameCase to Namelib
+
+* Bug Fixes:
+  * International surname prefix fixes
+  * Fix wording
+
+== 2.0.0
+
+* Bug Fixes:
+  * General maintenance
 
 == 1.1.0
 
@@ -11,8 +25,8 @@
 
 == 1.0.2
 
-* Updating NameCase to work with the new Edge Rails ActiveSupport::Multibye
-  class.  Thanks Dan Kubb (dan.kubb@autopilotmarketing.com)
+* Updating NameCase to work with the new Edge Rails ActiveSupport::Multibyte
+  class. Thanks Dan Kubb (dan.kubb@autopilotmarketing.com)
 * Converted to Hoe.
 
 == 1.0.0

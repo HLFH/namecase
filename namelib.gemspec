@@ -1,23 +1,23 @@
 # -*- encoding: utf-8 -*-
-# stub: namecase 2.1.0 ruby lib
+# stub: namelib 2.1.0 ruby lib
 
 Gem::Specification.new do |s|
-  s.name = "namecase"
+  s.name = "namelib"
   s.version = "2.1.0"
 
   s.require_paths = ["lib"]
   s.authors = ["Aaron Patterson", "Gaspard d'Hautefeuille"]
   s.date = "2017-09-30"
-  s.description = "NameCase is a Ruby implementation of `Lingua::EN::NameCase`, a library for\nconverting strings to be properly cased. This is good for converting\ndenormalized names to human friendly ones."
+  s.description = "namelib is a Ruby fork of NameCase, a library for converting denormalized names to be properly cased."
   s.email = ["ruby@dhautefeuille.eu"]
   s.extra_rdoc_files = ["History.txt", "LICENSE.txt", "Manifest.txt", "README.md"]
-  s.files = [".gemtest", "Gemfile", "History.txt", "LICENSE.txt", "Manifest.txt", "README.md", "Rakefile", "lib/namecase.rb", "test/test_namecase.rb"]
-  s.homepage = "https://github.com/HLFH/namecase/"
+  s.files = [".gemtest", "Gemfile", "History.txt", "LICENSE.txt", "Manifest.txt", "README.md", "Rakefile", "lib/namelib.rb", "test/test_namelib.rb"]
+  s.homepage = "https://github.com/HLFH/namelib/"
   s.licenses = ["GPL"]
   s.rdoc_options = ["--main", "README.md"]
   s.rubygems_version = "2.4.5"
-  s.summary = "NameCase is a Ruby implementation of `Lingua::EN::NameCase`, a library for converting strings to be properly cased"
-  s.test_files = ["test/test_namecase.rb"]
+  s.summary = "namelib is a Ruby fork of NameCase, a library for converting denormalized names to be properly cased."
+  s.test_files = ["test/test_namelib.rb"]
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
