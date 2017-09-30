@@ -12,8 +12,9 @@ converting denormalized names to be properly cased.
 Let's say in your database, all the names of your clients were in uppercase and that you want to properly lowercase the right parts of them, then Namelib is for you!
 
 ```ruby
-Namelib("RON BURGUNDY")  # => Ron Burgundy
-Namelib("MCDONALDS")     # => McDonalds
+Namelib("RON BURGUNDY")              # => Ron Burgundy
+Namelib("MCDONALDS")                 # => McDonalds
+Namelib("VALÉRY GISCARD D'ESTAING")  # => Valéry Giscard d'Estaing
 ```
 
 ## Acknowledgements
