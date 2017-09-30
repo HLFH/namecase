@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ["History.txt", "LICENSE.txt", "Manifest.txt", "README.md"]
   s.files = [".gemtest", "Gemfile", "History.txt", "LICENSE.txt", "Manifest.txt", "README.md", "Rakefile", "lib/namelib.rb", "test/test_namelib.rb"]
   s.homepage = "https://github.com/HLFH/namelib/"
-  s.licenses = ["GPL"]
+  s.licenses = ["GPL-3.0"]
   s.rdoc_options = ["--main", "README.md"]
   s.rubygems_version = "2.4.5"
-  s.summary = "namelib is a Ruby fork of NameCase, a library for converting denormalized names to be properly cased."
+  s.summary = "Ruby gem that properly cases your clients' names"
   s.test_files = ["test/test_namelib.rb"]
 
   if s.respond_to? :specification_version then
