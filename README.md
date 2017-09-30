@@ -23,7 +23,6 @@ And also a fork of the `NameCase` gem by Aaron Patterson.
 
 Original Version:
 Copyright (c) Mark Summerfield 1998-2002.
-<summer@perlpress.com>
 All Rights Reserved
 
 Ruby version:
