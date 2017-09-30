@@ -6,7 +6,7 @@ https://rubygems.org/gems/namecase
 
 NameCase is a Ruby implementation of `Lingua::EN::NameCase`, a library for
 converting strings to be properly cased. This is good for converting
-denormalized data to human friendly data.
+denormalized names to human friendly ones.
 
 ## Example Usage
 
@@ -29,7 +29,7 @@ Copyright (c) Mark Summerfield 1998-2002.
 All Rights Reserved
 
 Ruby Version:
-Copyright (c) Aaron Patterson 2006
+Copyright (c) Aaron Patterson 2006-2015
 
 ## License
 
