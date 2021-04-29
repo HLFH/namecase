@@ -1,5 +1,32 @@
+require 'byebug'
 module Namelib
   VERSION = '2.1.0'
+
+  POST_NOMINAL_INITIALS = %w(
+    VC GC KG LG KT LT KP GCB OM GCSI GCMG GCIE GCVO GBE CH KCB DCB KCSI KCMG
+    DCMG KCIE KCVO DCVO KBE DBE CB CSI CMG CIE CVO CBE DSO LVO OBE ISO MVO MBE
+    IOM CGC RRC DSC MC DFC AFC ARRC OBI DCM CGM GM IDSM DSM MM DFM AFM SGM IOM
+    CPM QGM RVM BEM QPM QFSM QAM CPM MSM ERD VD TD UD ED RD VRD AE
+
+    PC ADC QHP QHS QHDS QHNS QHC SCJ J LJ QS SL QC KC JP DL MP MSP MSYP AM AM
+    MLA MEP  DBEnv DConstMgt DREst EdD DPhil PhD DLitt DSocSci MD EngD DD LLD
+    DProf MA MArch MAnth MSc MMORSE MMath MMathStat MPharm MPhil MSc MSci MSt
+    MRes MEng MChem MBiochem MSocSc MMus LLM BCL MPhys MComp MAcc MFin MBA MPA
+    MEd MEP MEnt MCGI MGeol MLitt MEarthSc MClinRes BA BSc LLB BEng MBChB FdA
+    FdSc FdEng PgDip PgD PgCert PgC PgCLTHE AUH AKC AUS HNC HNCert HND HNDip
+    DipHE Dip OND CertHE ACSM MCSM DIC AICSM ARSM ARCS LLB LLM BCL MJur DPhil
+    PhD LLD DipLP FCILEx GCILEx ACILEx CQSW DipSW BSW MSW FCILT CMILT MILT CPL
+    CTP CML PLS CTL DLP PLog EJLog ESLog EMLog JrLog Log SrLog BArch MArch ARB
+    RIBA RIAS RIAI RSAW MB BM BS BCh BChir MRCS FRCS MS MCh. MRCP FRCP MRCPCH
+    FRCPCH MRCPath MFPM FFPM BDS MRCPsych FRCPsych MRCOG FRCOG MCEM FCEM FRCA
+    FFPMRCA MRCGP FRCGP BSc MScChiro MChiro MSc DC LFHOM MFHOM FFHOM FADO FBDO
+    FCOptom MCOptom MOst DPT MCSP FCSP. SROT MSCR FSCR. CPhT RN VN RVN BVSc
+    BVetMed VetMB BVM&S MRCVS FRCVS FAWM PGCAP PGCHE PGCE PGDE BEd NPQH QTS
+    CSci CSciTeach RSci RSciTech CEng IEng EngTech ICTTech DEM MM CMarEng
+    CMarSci CMarTech IMarEng MarEngTech RGN SRN RMN RSCN SEN EN RNMH RN RM RN1
+    RNA RN2 RN3 RNMH RN4 RN5 RNLD RN6 RN8 RNC RN7 RN9 RHV RSN ROH RFHN SPAN
+    SPMH SPCN SPLD SPHP SCHM SCLD SPCC SPDN V100 V200 V300 LPE MSc
+  )
 
   # Returns a new +String+ with the contents properly namecased
   def nc(options = {})
@@ -16,7 +43,7 @@ module Namelib
   end
 
   def self.nc str, options = {}
-    options = { :lazy => true, :irish => true, :spanish => true }.merge options
+    options = { :lazy => true, :irish => true, :spanish => true, :post_nominal_initials => true }.merge options
 
     # Skip if string is mixed case
     if options[:lazy]
@@ -77,6 +104,12 @@ module Namelib
     if options[:spanish]
       ["Y", "E", "I"].each do |conjunction|
         localstring.gsub!(/\b#{conjunction}\b/, conjunction.downcase)
+      end
+    end
+
+    if options[:post_nominal_initials]
+      POST_NOMINAL_INITIALS.each do |pni|
+        localstring.gsub!(/(\b)(#{pni})(.?\s*)$/i, '\1' + pni + '\3')
       end
     end
 

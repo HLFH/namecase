@@ -29,10 +29,27 @@ class TestNamelib < Minitest::Test
       "Henry VIII",       "Louis III",            "Louis XIV",
       "Charles II",       "Fred XLIX",            "Yusof bin Ishak",
     ]
+
+    @proper_names_with_post_initials = [
+      "Keith Smith PhD",        "John McAfee MEarthSc",
+      "Jan van Yke, MCOptom",   "John el Grecco, PhD.",
+      "Mike Spaceattheend RSciTech. ",
+      "Richard de l'Hôpital Mas i Gavarró V200"
+    ]
   end
 
   def test_namelib
     @proper_names.each do |name|
+      assert_equal(name, Namelib(name.downcase))
+      n = name.dup
+      n.extend(Namelib)
+      assert_equal(name, n.nc)
+      assert_equal(name, Namelib(name))
+    end
+  end
+
+  def test_namelib_post_nominal_initials
+    @proper_names_with_post_initials.each do |name|
       assert_equal(name, Namelib(name.downcase))
       n = name.dup
       n.extend(Namelib)
